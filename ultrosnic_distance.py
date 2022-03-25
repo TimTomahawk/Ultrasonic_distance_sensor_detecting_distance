@@ -20,15 +20,15 @@ def distancex ():
     StopTime = time.time()
 
     while GPIO.input(GPIO_ECHOx) == 0:   ## save StartTime
-        StartTime = time.time()
+        continue
 
     while GPIO.input(GPIO_ECHOx) == 1:  ##save time of arrival
         StopTime = time.time()
 
     TimeElapsed = StopTime - StartTime
-    distancex = (TimeElapsed * 34300)/2   ##to measure the distance
+    dist_x = (TimeElapsed * 34300)/2   ##to measure the distance
 
-    return distancex
+    return dist_x
 
 GPIO.setup(GPIO_TRIGGERy, GPIO.OUT)
 GPIO.setup(GPIO_ECHOy.IN)
@@ -42,22 +42,24 @@ def distancey():
     StopTime = time.time()
 
     while GPIO.input(GPIO_ECHOy) == 0:
-        StartTime = time.time()
+        continue
     while GPIO.input(GPIO_ECHOy) == 0:
         StopTime = time.time()
 
-    TimeElapsed = StopTime = StartTime
-    distancey = (TimeElapsed * 34300)/2
+    TimeElapsed = StopTime - StartTime
+    dist_y = (TimeElapsed * 34300)/2
 
-    return distancey
+    return dist_y
 
 
 
 if _name_ == '_main_':
     try:
         while True:
-            dist = distance()
-            print ("Measured Distance = %.1f cm" % dist)
+            dist_x = distancex()
+            dist_y = distancey()
+            print ("Measured Distance = %.1f cm" % dist_x)
+            print ("Measured Distance = %.1f cm" % dist_y)
             time.sleep(1)
 
     except KeyboardInterrupt:    ##Reset by pressing CTRL+C
