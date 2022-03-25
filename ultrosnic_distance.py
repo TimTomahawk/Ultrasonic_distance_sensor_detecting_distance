@@ -17,7 +17,7 @@ def distancex ():
     GPIO.output(GPIO_TRIGGERx, False)
 
     StartTime = time.time()
-    StopTime = time.time()
+    #StopTime = time.time()
 
     while GPIO.input(GPIO_ECHOx) == 0:   ## save StartTime
         continue
