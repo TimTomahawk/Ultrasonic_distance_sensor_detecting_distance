@@ -56,11 +56,11 @@ if __name__ == '__main__':
     try:
         while True:
             dist_x = distancex()
-            time.sleep(1)
+            time.sleep(0.5)
             dist_y = distancey()
             print ("Measured Distance_x = %.1f cm" % dist_x)
             print ("Measured Distance_y = %.1f cm" % dist_y)
-            time.sleep(1)
+            time.sleep(0.5)
 
     except KeyboardInterrupt:    ##Reset by pressing CTRL+C
         print("Measurement stopped by User")
