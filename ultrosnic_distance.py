@@ -55,9 +55,9 @@ def distancey():
 if __name__ == '__main__':
     try:
         while True:
-            #dist_x = distancex()
+            dist_x = distancex()
             dist_y = distancey()
-            #print ("Measured Distance_x = %.1f cm" % dist_x)
+            print ("Measured Distance_x = %.1f cm" % dist_x)
             print ("Measured Distance_y = %.1f cm" % dist_y)
             time.sleep(1)
 
