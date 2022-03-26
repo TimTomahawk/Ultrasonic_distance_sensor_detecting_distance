@@ -13,7 +13,7 @@ GPIO.setup(GPIO_ECHOx, GPIO.IN)
 GPIO.setup(GPIO_TRIGGERy, GPIO.OUT)
 GPIO.setup(GPIO_ECHOy, GPIO.IN)
 
-def distancex ():
+def distancex():
     GPIO.output(GPIO_TRIGGERx, True)  ## Set trigger to high
     time.sleep(0.00001)  ## set trigger after 0.01ms to LOW
     GPIO.output(GPIO_TRIGGERx, False)
@@ -56,6 +56,7 @@ if __name__ == '__main__':
     try:
         while True:
             dist_x = distancex()
+            time.sleep(1)
             dist_y = distancey()
             print ("Measured Distance_x = %.1f cm" % dist_x)
             print ("Measured Distance_y = %.1f cm" % dist_y)
