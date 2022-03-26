@@ -42,7 +42,7 @@ def distancey():
     StopTime = time.time()
 
     while GPIO.input(GPIO_ECHOy) == 0:
-        continue
+        StartTime = time.time()
     while GPIO.input(GPIO_ECHOy) == 1:
         StopTime = time.time()
 
@@ -57,9 +57,9 @@ if __name__ == '__main__':
     try:
         while True:
             dist_x = distancex()
-            #dist_y = distancey()
-            print ("Measured Distance = %.1f cm" % dist_x)
-            #print ("Measured Distance = %.1f cm" % dist_y)
+            dist_y = distancey()
+            print ("Measured Distance_x = %.1f cm" % dist_x)
+            print ("Measured Distance_y = %.1f cm" % dist_y)
             time.sleep(1)
 
     except KeyboardInterrupt:    ##Reset by pressing CTRL+C
