@@ -3,10 +3,10 @@ import time
 
 GPIO.setmode(GPIO.BCM)  ## GPIO MODE (BOARD/BCM)
 
-GPIO_TRIGGERx = **     ## SET GPIO PINS
-GPIO_ECHOx = **
-GPIO_TRIGGERy = **
-GPIO_ECHOy = **
+GPIO_TRIGGERx = 23     ## SET GPIO PINS
+GPIO_ECHOx = 24
+GPIO_TRIGGERy = 25
+GPIO_ECHOy = 16
 
 GPIO.setup(GPIO_TRIGGERx, GPIO.OUT)   ## set GPIO direction (IN/out)
 GPIO.setup(GPIO_ECHOx.IN)
