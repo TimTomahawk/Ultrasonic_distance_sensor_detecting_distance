@@ -57,9 +57,9 @@ if __name__ == '__main__':
     try:
         while True:
             dist_x = distancex()
-            dist_y = distancey()
+            #dist_y = distancey()
             print ("Measured Distance = %.1f cm" % dist_x)
-            print ("Measured Distance = %.1f cm" % dist_y)
+            #print ("Measured Distance = %.1f cm" % dist_y)
             time.sleep(1)
 
     except KeyboardInterrupt:    ##Reset by pressing CTRL+C
