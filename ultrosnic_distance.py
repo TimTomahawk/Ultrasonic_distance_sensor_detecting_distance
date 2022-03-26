@@ -17,10 +17,10 @@ def distancex ():
     GPIO.output(GPIO_TRIGGERx, False)
 
     StartTime = time.time()
-    #StopTime = time.time()
+    StopTime = time.time()
 
     while GPIO.input(GPIO_ECHOx) == 0:   ## save StartTime
-        continue
+        StartTime = time.time()
 
     while GPIO.input(GPIO_ECHOx) == 1:  ##save time of arrival
         StopTime = time.time()
@@ -43,7 +43,7 @@ def distancey():
 
     while GPIO.input(GPIO_ECHOy) == 0:
         continue
-    while GPIO.input(GPIO_ECHOy) == 0:
+    while GPIO.input(GPIO_ECHOy) == 1:
         StopTime = time.time()
 
     TimeElapsed = StopTime - StartTime
