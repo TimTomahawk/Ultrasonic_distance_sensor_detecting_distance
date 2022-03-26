@@ -9,7 +9,7 @@ GPIO_TRIGGERy = 25
 GPIO_ECHOy = 16
 
 GPIO.setup(GPIO_TRIGGERx, GPIO.OUT)   ## set GPIO direction (IN/out)
-GPIO.setup(GPIO_ECHOx.IN)
+GPIO.setup(GPIO_ECHOx, GPIO.IN)
 
 def distancex ():
     GPIO.output(GPIO_TRIGGERx, True)  ## Set trigger to high
@@ -31,7 +31,7 @@ def distancex ():
     return dist_x
 
 GPIO.setup(GPIO_TRIGGERy, GPIO.OUT)
-GPIO.setup(GPIO_ECHOy.IN)
+GPIO.setup(GPIO_ECHOy, GPIO.IN)
 
 def distancey():
     GPIO.output(GPIO_TRIGGERy,True)
