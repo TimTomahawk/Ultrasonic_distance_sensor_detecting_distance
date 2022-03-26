@@ -10,6 +10,8 @@ GPIO_ECHOy = 16
 
 GPIO.setup(GPIO_TRIGGERx, GPIO.OUT)   ## set GPIO direction (IN/out)
 GPIO.setup(GPIO_ECHOx, GPIO.IN)
+GPIO.setup(GPIO_TRIGGERy, GPIO.OUT)
+GPIO.setup(GPIO_ECHOy, GPIO.IN)
 
 def distancex ():
     GPIO.output(GPIO_TRIGGERx, True)  ## Set trigger to high
@@ -29,9 +31,6 @@ def distancex ():
     dist_x = (TimeElapsed * 34300)/2   ##to measure the distance
 
     return dist_x
-
-GPIO.setup(GPIO_TRIGGERy, GPIO.OUT)
-GPIO.setup(GPIO_ECHOy, GPIO.IN)
 
 def distancey():
     GPIO.output(GPIO_TRIGGERy,True)
@@ -56,9 +55,9 @@ def distancey():
 if __name__ == '__main__':
     try:
         while True:
-            dist_x = distancex()
+            #dist_x = distancex()
             dist_y = distancey()
-            print ("Measured Distance_x = %.1f cm" % dist_x)
+            #print ("Measured Distance_x = %.1f cm" % dist_x)
             print ("Measured Distance_y = %.1f cm" % dist_y)
             time.sleep(1)
 
