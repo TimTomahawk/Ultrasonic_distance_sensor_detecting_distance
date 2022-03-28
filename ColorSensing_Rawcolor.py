@@ -94,11 +94,10 @@ if __name__=='__main__':
     setup_2()
 
     try:
-        while True:
-            loop_1()
-            time.sleep(0.2)
-            loop_2()
-            time.sleep(0.2)
-    
+        loop_1()
+        time.sleep(0.5)
+        loop_2()
+        time.sleep(0.5)
+
     except KeyboardInterrupt:
         endprogram()
