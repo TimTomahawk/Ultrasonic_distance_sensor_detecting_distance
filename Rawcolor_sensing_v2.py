@@ -34,7 +34,7 @@ def CS_1_white():
     white_1  = NUM_CYCLES / duration   #in Hz
     return white_1
 
-def CS_2_blue():
+def CS_1_blue():
 
     GPIO.output(s2,GPIO.LOW)
     GPIO.output(s3,GPIO.HIGH)
