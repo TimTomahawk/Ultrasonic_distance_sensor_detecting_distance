@@ -85,20 +85,19 @@ def endprogram():
 if __name__=='__main__':
 
     try:
-        white_1 = CS_1_white()
-        time.sleep(0.2)
-        blue_1 = CS_1_blue()
-        time.sleep(0.2)
-        white_2 = CS_2_white()
-        time.sleep(0.2)
-        blue_2 = CS_2_blue()
-        time.sleep(0.2)
-        print("Measured white_1 = %.1f hz" % white_1)
-        print("Measured blue_1 = %.1f hz" % blue_1)
-        print("Measured white_2 = %.1f hz" % white_2)
-        print("Measured blue_2 = %.1f hz" % blue_2)
-        time.sleep(0.5)
-
-
+        while true:
+            white_1 = CS_1_white()
+            time.sleep(0.2)
+            blue_1 = CS_1_blue()
+            time.sleep(0.2)
+            white_2 = CS_2_white()
+            time.sleep(0.2)
+            blue_2 = CS_2_blue()
+            time.sleep(0.2)
+            print("Measured white_1 = %.1f hz" % white_1)
+            print("Measured blue_1 = %.1f hz" % blue_1)
+            print("Measured white_2 = %.1f hz" % white_2)
+            print("Measured blue_2 = %.1f hz" % blue_2)
+            time.sleep(0.5)
     except KeyboardInterrupt:
         endprogram()
