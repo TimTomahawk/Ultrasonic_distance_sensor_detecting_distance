@@ -89,8 +89,8 @@ if __name__=='__main__':
     setup()
 
     try:
-        loop1()
-        loop2()
+        loop_1()
+        loop_2()
 
     except KeyboardInterrupt:
         endprogram()
