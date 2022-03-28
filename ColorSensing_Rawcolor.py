@@ -31,7 +31,7 @@ def loop_1():
 
     start = time.time()
     for impulse_count in range(NUM_CYCLES):
-      GPIO.wait_for_edge(signal, GPIO.FALLING)
+      GPIO.wait_for_edge(signal_1, GPIO.FALLING)
     duration = time.time() - start      #seconds to run for loop
     white_1  = NUM_CYCLES / duration   #in Hz
     print("white value_1 - ",white_1)
@@ -43,7 +43,7 @@ def loop_1():
 
     start = time.time()
     for impulse_count in range(NUM_CYCLES):
-      GPIO.wait_for_edge(signal, GPIO.FALLING)
+      GPIO.wait_for_edge(signal_1, GPIO.FALLING)
     duration = time.time() - start
     blue_1 = NUM_CYCLES / duration
     print("blue value_1 - ",blue_1)
@@ -61,7 +61,7 @@ def loop_2():
 
     start = time.time()
     for impulse_count in range(NUM_CYCLES):
-      GPIO.wait_for_edge(signal, GPIO.FALLING)
+      GPIO.wait_for_edge(signal_2, GPIO.FALLING)
     duration = time.time() - start      #seconds to run for loop
     white_2  = NUM_CYCLES / duration   #in Hz
     print("white value_2 - ",white_2)
@@ -73,7 +73,7 @@ def loop_2():
 
     start = time.time()
     for impulse_count in range(NUM_CYCLES):
-      GPIO.wait_for_edge(signal, GPIO.FALLING)
+      GPIO.wait_for_edge(signal_2, GPIO.FALLING)
     duration = time.time() - start
     blue_2 = NUM_CYCLES / duration
     print("blue value_2 - ",blue_2)
@@ -90,7 +90,9 @@ if __name__=='__main__':
 
     try:
         loop_1()
+        time.sleep(0.2)
         loop_2()
+        time.sleep(0.2)
 
     except KeyboardInterrupt:
         endprogram()
