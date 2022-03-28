@@ -18,6 +18,7 @@ def setup_1():  ## def setup
   print("\n")
 
 def setup_2():  ## def setup
+  GPIO.setmode(GPIO.BCM)
   GPIO.setup(signal_2,GPIO.IN, pull_up_down=GPIO.PUD_UP)
   GPIO.setup(s4,GPIO.OUT)
   GPIO.setup(s5,GPIO.OUT)
