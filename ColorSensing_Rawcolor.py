@@ -90,14 +90,13 @@ def endprogram():
 
 if __name__=='__main__':
 
-    setup_1()
-    setup_2()
+    setup_1(),setup_2()
 
     try:
         loop_1()
-        time.sleep(0.5)
+        time.sleep(0.2)
         loop_2()
-        time.sleep(0.5)
+        time.sleep(0.2)
 
     except KeyboardInterrupt:
         endprogram()
