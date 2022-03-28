@@ -85,7 +85,7 @@ def endprogram():
 if __name__=='__main__':
 
     try:
-        while true:
+        while True:
             white_1 = CS_1_white()
             time.sleep(0.2)
             blue_1 = CS_1_blue()
