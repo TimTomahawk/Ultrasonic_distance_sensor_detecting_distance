@@ -10,11 +10,14 @@ s4 = 17
 s5 = 27
 signal_2 = 22
 
-def setup():  ## def setup
+def setup_1():  ## def setup
   GPIO.setmode(GPIO.BCM)
   GPIO.setup(signal_1,GPIO.IN, pull_up_down=GPIO.PUD_UP)
   GPIO.setup(s2,GPIO.OUT)
   GPIO.setup(s3,GPIO.OUT)
+  print("\n")
+
+def setup_2():  ## def setup
   GPIO.setup(signal_2,GPIO.IN, pull_up_down=GPIO.PUD_UP)
   GPIO.setup(s4,GPIO.OUT)
   GPIO.setup(s5,GPIO.OUT)
@@ -86,7 +89,8 @@ def endprogram():
 
 if __name__=='__main__':
 
-    setup()
+    setup_1()
+    setup_2()
 
     try:
         loop_1()
