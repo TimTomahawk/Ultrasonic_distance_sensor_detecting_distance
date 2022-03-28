@@ -9,7 +9,7 @@ signal = 25
 NUM_CYCLES = 10
 
 
-def setup():
+def setup():  ## def setup
   GPIO.setmode(GPIO.BCM)
   GPIO.setup(signal,GPIO.IN, pull_up_down=GPIO.PUD_UP)
   GPIO.setup(s2,GPIO.OUT)
