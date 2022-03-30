@@ -48,21 +48,33 @@ p2=GPIO.PWM(ENB1,1000)
 p3=GPIO.PWM(ENA2,1000)
 p4=GPIO.PWM(ENB2,1000)
 
+def full_stop():
+    GPIO.output(in1,GPIO.HIGH)
+    GPIO.output(in2,GPIO.HIGH)
+    GPIO.output(in3,GPIO.HIGH)
+    GPIO.output(in4,GPIO.HIGH)
+    GPIO.output(in5,GPIO.HIGH)
+    GPIO.output(in6,GPIO.HIGH)
+    GPIO.output(in7,GPIO.HIGH)
+    GPIO.output(in8,GPIO.HIGH)
+
 curr_x = distancex()
 time.sleep(0.2)
 curr_y = distancey()
 time.sleep(0.2)
 color_white_1 = CS_1_white()
-time.sleep(0.2)
+#time.sleep(0.2)
 color_blue_1 = CS_1_blue()
-time.sleep(0.2)
+#time.sleep(0.2)
 color_white_2 = CS_2_white()
-time.sleep(0.2)
+#time.sleep(0.2)
 color_blue_2 = CS_2_blue()
-time.sleep(0.2)
+#time.sleep(0.2)
 
-diffx = curr_x - xPosition
-diffy = curr_y - yPosition
+diffx_1 = curr_x - xPosition ##difference in x direction before rotation
+diffy_1 = curr_y - yPosition ## different in y direction before rotation
+diffx_2 = curr_y - xPosition ## difference in x direction before rotation
+diffy_2 = curr_x - yPosition ## difference in y direction before rotation
 
 color_1_sees_white = color_white_1 >= white_white and color_blue_1 <= white_blue
 color_1_sees_blue = color_white_1 >= blue_white and color_blue_1 <= blue_blue
@@ -70,7 +82,7 @@ color_2_sees_white = color_white_2 >= white_white and color_blue_2 <= white_blue
 color_2_sees_blue = color_white_2 >= blue_white and color_blue_2 <= blue_blue
 
 
-while abs(diffx)-tDistance >= 0.5:   ## stage1: function for moving along x-axis
+while abs(diffx_1)-tDistance >= 0.5 and abs(diffy_1)-tDistance >= 0.5:   ## stage1: function for moving along x-axis
 
     if (color_1_sees_white and color_2_sees_white):  ## going straight
         GPIO.output(in1,GPIO.HIGH)
@@ -124,6 +136,34 @@ while abs(diffx)-tDistance >= 0.5:   ## stage1: function for moving along x-axis
         p2.start(40)
         p3.start(40)
         p4.start(40)
+
+    time.sleep(0.5)
+    full_stop()
+
+    curr_x = distancex()
+    time.sleep(0.2)
+    curr_y = distancey()
+    time.sleep(0.2)
+    color_white_1 = CS_1_white()
+    #time.sleep(0.2)
+    color_blue_1 = CS_1_blue()
+    #time.sleep(0.2)
+    color_white_2 = CS_2_white()
+    #time.sleep(0.2)
+    color_blue_2 = CS_2_blue()
+    #time.sleep(0.2)
+
+    diffx_1 = curr_x - xPosition ##difference in x direction before rotation
+    diffy_1 = curr_y - yPosition ## different in y direction before rotation
+    diffx_2 = curr_y - xPosition ## difference in x direction before rotation
+    diffy_2 = curr_x - yPosition ## difference in y direction before rotation
+
+    color_1_sees_white = color_white_1 >= white_white and color_blue_1 <= white_blue
+    color_1_sees_blue = color_white_1 >= blue_white and color_blue_1 <= blue_blue
+    color_2_sees_white = color_white_2 >= white_white and color_blue_2 <= white_blue
+    color_2_sees_blue = color_white_2 >= blue_white and color_blue_2 <= blue_blue
+
+print("stage 1 complete")
 
 GPIO.output(in1,GPIO.LOW)        ## stage2 function for turning from xdirection to ydirection
 GPIO.output(in2,GPIO.HIGH)
@@ -137,9 +177,36 @@ p1.start(30)
 p2.start(30)
 p3.start(30)
 p4.start(30)
-time.sleep(sleepT)
 
-while abs(diffy) - tDistance >= 0.5:   ## stage3 function for moving along y-axis
+time.sleep(sleepT)
+full_stop()
+
+print("stage 2 complete")
+
+curr_x = distancex()
+time.sleep(0.2)
+curr_y = distancey()
+time.sleep(0.2)
+color_white_1 = CS_1_white()
+#time.sleep(0.2)
+color_blue_1 = CS_1_blue()
+#time.sleep(0.2)
+color_white_2 = CS_2_white()
+#time.sleep(0.2)
+color_blue_2 = CS_2_blue()
+#time.sleep(0.2)
+
+diffx_1 = curr_x - xPosition ##difference in x direction before rotation
+diffy_1 = curr_y - yPosition ## different in y direction before rotation
+diffx_2 = curr_y - xPosition ## difference in x direction before rotation
+diffy_2 = curr_x - yPosition ## difference in y direction before rotation
+
+color_1_sees_white = color_white_1 >= white_white and color_blue_1 <= white_blue
+color_1_sees_blue = color_white_1 >= blue_white and color_blue_1 <= blue_blue
+color_2_sees_white = color_white_2 >= white_white and color_blue_2 <= white_blue
+color_2_sees_blue = color_white_2 >= blue_white and color_blue_2 <= blue_blue
+
+while abs(diffy_2) - tDistance >= 0.5 and abs(diffx_2) - tDistance <= 0.5:   ## stage3 function for moving along y-axis
 
     if (color_1_sees_white and color_2_sees_white):  ## going straight
         GPIO.output(in1,GPIO.HIGH)
@@ -194,5 +261,31 @@ while abs(diffy) - tDistance >= 0.5:   ## stage3 function for moving along y-axi
         p3.start(40)
         p4.start(40)
 
-while KeyboardInterrupt:
-    GPIO.cleanup()
+    time.sleep(0.5)
+    full_stop()
+
+    curr_x = distancex()
+    time.sleep(0.2)
+    curr_y = distancey()
+    time.sleep(0.2)
+    color_white_1 = CS_1_white()
+    #time.sleep(0.2)
+    color_blue_1 = CS_1_blue()
+    #time.sleep(0.2)
+    color_white_2 = CS_2_white()
+    #time.sleep(0.2)
+    color_blue_2 = CS_2_blue()
+    #time.sleep(0.2)
+
+    diffx_1 = curr_x - xPosition ##difference in x direction before rotation
+    diffy_1 = curr_y - yPosition ## different in y direction before rotation
+    diffx_2 = curr_y - xPosition ## difference in x direction before rotation
+    diffy_2 = curr_x - yPosition ## difference in y direction before rotation
+
+    color_1_sees_white = color_white_1 >= white_white and color_blue_1 <= white_blue
+    color_1_sees_blue = color_white_1 >= blue_white and color_blue_1 <= blue_blue
+    color_2_sees_white = color_white_2 >= white_white and color_blue_2 <= white_blue
+    color_2_sees_blue = color_white_2 >= blue_white and color_blue_2 <= blue_blue
+
+
+full_stop()
