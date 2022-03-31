@@ -3,6 +3,11 @@ import time
 from ultrasonic_distance import distancex,distancey
 from Rawcolor_sensing_v2 import CS_1_white,CS_1_blue,CS_2_white,CS_2_blue
 
+
+xPosition = 10  ##input of x-coordinate
+yPosition = 10  ## input of y-coordiante
+
+
 ENA1 = 2  ## set up pin numbers
 ENB1 = 11
 in1 = 3
@@ -17,8 +22,6 @@ in7 = 13
 in8 = 19
 #temp1=1
 
-xPosition = 10  ##input of x-coordinate
-yPosition = 10  ## input of y-coordiante
 tDistance = 3  ## tolerance distance
 sleepT= 30   ## turning from x to y time used
 
