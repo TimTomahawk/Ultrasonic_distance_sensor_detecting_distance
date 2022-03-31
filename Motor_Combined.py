@@ -165,7 +165,7 @@ while abs(diffx_1)-tDistance >= 0.5 and abs(diffy_1)-tDistance >= 0.5:   ## stag
 
 print("stage 1 complete")
 
-GPIO.output(in1,GPIO.LOW)        ## stage2 function for turning from xdirection to ydirection
+GPIO.output(in1,GPIO.LOW)        ## stage2 function for turning from xdirection to y direction
 GPIO.output(in2,GPIO.HIGH)
 GPIO.output(in3,GPIO.LOW)
 GPIO.output(in4,GPIO.HIGH)
@@ -287,5 +287,7 @@ while abs(diffy_2) - tDistance >= 0.5 and abs(diffx_2) - tDistance <= 0.5:   ## 
     color_2_sees_white = color_white_2 >= white_white and color_blue_2 <= white_blue
     color_2_sees_blue = color_white_2 >= blue_white and color_blue_2 <= blue_blue
 
+print("Stage 3 completed")
 
 full_stop()
+print("All stage completed")
