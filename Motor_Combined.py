@@ -3,7 +3,7 @@ import time
 from ultrasonic_distance import distancex,distancey
 from Rawcolor_sensing_v2 import CS_1_white,CS_1_blue,CS_2_white,CS_2_blue
 
-ENA1 = 2
+ENA1 = 2  ## set up pin numbers
 ENB1 = 11
 in1 = 3
 in2 = 4
