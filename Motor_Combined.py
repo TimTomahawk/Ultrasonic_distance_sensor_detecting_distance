@@ -24,8 +24,8 @@ sleepT= 30   ## turning from x to y time used
 
 white_white = 1500   ## white frequency while detecting white
 white_blue = 1000    ## blue freqneucy value while detecting white
-blue_white = 460    ## white frequency value while detecting blue
-blue_blue = 500    ##blue frequency value while detecting blue
+blue_white = 800    ## white frequency value while detecting blue
+blue_blue = 400    ##blue frequency value while detecting blue
 
 GPIO.setmode(GPIO.BCM)
 
