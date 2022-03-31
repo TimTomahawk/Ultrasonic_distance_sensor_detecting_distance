@@ -27,6 +27,7 @@ white_blue = 1000    ## blue freqneucy value while detecting white
 blue_white = 800    ## white frequency value while detecting blue
 blue_blue = 400    ##blue frequency value while detecting blue
 
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(in1,GPIO.OUT)
