@@ -22,10 +22,10 @@ yPosition = 10  ## input of y-coordiante
 tDistance = 3  ## tolerance distance
 sleepT= 30   ## turning from x to y time used
 
-white_white = 1500   ## white frequency while detecting white
-white_blue = 1000    ## blue freqneucy value while detecting white
-blue_white = 800    ## white frequency value while detecting blue
-blue_blue = 400    ##blue frequency value while detecting blue
+white_white = 10000   ## white frequency while detecting white
+white_blue = 3500    ## blue freqneucy value while detecting white
+blue_white = 2000    ## white frequency value while detecting blue
+blue_blue = 1300    ##blue frequency value while detecting blue
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
