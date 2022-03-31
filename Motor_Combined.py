@@ -18,7 +18,7 @@ in8 = 19
 #temp1=1
 
 xPosition = 10  ##input of x-coordinate
-yPosition = 20  ## input of y-coordiante
+yPosition = 10  ## input of y-coordiante
 tDistance = 3  ## tolerance distance
 sleepT= 30   ## turning from x to y time used
 
