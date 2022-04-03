@@ -46,7 +46,7 @@ def onClick():
         labelwindowNewPos1.pack()
 
         xPos = StringVar()
-
+        
         xPosQ = Entry(windowNewPos,textvariable=xPos,font=(14))
         xPosQ.pack()
 

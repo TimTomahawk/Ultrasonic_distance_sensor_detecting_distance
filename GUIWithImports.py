@@ -11,13 +11,13 @@ counterPhase = 0
 
 #onClick command
 def onclick(number):
-        window1.destroy()
-        counterPhase = number
-        if counterPhase == 1: #New coordinates
-            import CreatingFileGUI
+    window1.destroy()
+    counterPhase = number
+    if counterPhase == 1: #New coordinates
+        import CreatingFileGUI
 
-        if counterPhase == 2:#Existing coordinates
-            import UseExistingFileGUI
+    if counterPhase == 2:#Existing coordinates
+        import UseExistingFileGUI
 
 window1=Tk()#First Window
 window1.title('Selection')
