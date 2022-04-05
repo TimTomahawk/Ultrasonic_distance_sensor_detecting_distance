@@ -7,9 +7,7 @@ from Rawcolor_sensing_v2 import CS_1_white,CS_1_blue,CS_2_white,CS_2_blue
 import os
 import GUIWithImports
 from tempFileExtraction import extracting#Extracting values from temp file
-if os.environ.get('DISPLAY','') == '':
-    print('no display found. Using :0.0')
-    os.environ.__setitem__('DISPLAY', ':0.0')
+
 binNumber = extracting(0)#Values in temp file assigned at its appropiate position
 xPosition = extracting(1)
 yPosition = extracting(2)

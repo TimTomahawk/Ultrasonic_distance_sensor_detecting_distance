@@ -1,11 +1,9 @@
 import sys
 import os
 from tkinter import *
-import tkinter
+
 from tkinter import messagebox
-if os.environ.get('DISPLAY','') == '':
-    print('no display found. Using :0.0')
-    os.environ.__setitem__('DISPLAY', ':0.0')
+
 xPosition = 0
 yPosition = 0
 windowNew=Tk()

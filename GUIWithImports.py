@@ -2,16 +2,14 @@ import sys
 import os
 from tkinter import *
 from tkinter import messagebox
-import tkinter
+
 
 #CounterPhase is to control the phase of the program
 #CounterPhase = 0 is default setting with no output
 #CounterPhase = 1 is to create new coordinates
 #CounterPhase = 2 is to use existing coordinates from a .txt file
 counterPhase = 0
-if os.environ.get('DISPLAY','') == '':
-    print('no display found. Using :0.0')
-    os.environ.__setitem__('DISPLAY', ':0.0')
+
 #onClick command
 def onclick(number):
     window1.destroy()

@@ -1,12 +1,10 @@
 from tkinter import *
 from tkinter import messagebox
-import Tkinter
+
 import os
 import sys
-if os.environ.get('DISPLAY','') == '':
-    print('no display found. Using :0.0')
-    os.environ.__setitem__('DISPLAY', ':0.0')
-    
+
+
 def extractingCoordinateValue(number):
     coordinateValue = []
     dataTxtSelected = open("Bin"+number+".txt", "r")
