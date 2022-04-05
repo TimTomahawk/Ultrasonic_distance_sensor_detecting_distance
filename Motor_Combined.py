@@ -8,6 +8,8 @@ import os
 import GUIWithImports
 from tempFileExtraction import extracting#Extracting values from temp file
 
+export DISPLAY=:0
+
 binNumber = extracting(0)#Values in temp file assigned at its appropiate position
 xPosition = extracting(1)
 yPosition = extracting(2)

@@ -2,7 +2,7 @@ import sys
 import os
 from tkinter import *
 from tkinter import messagebox
-
+export DISPLAY=:0
 
 #CounterPhase is to control the phase of the program
 #CounterPhase = 0 is default setting with no output
