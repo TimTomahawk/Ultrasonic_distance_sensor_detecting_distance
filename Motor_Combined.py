@@ -221,7 +221,7 @@ color_1_sees_blue = color_white_1 >= blue_white and color_blue_1 <= blue_blue
 color_2_sees_white = color_white_2 >= white_white and color_blue_2 <= white_blue
 color_2_sees_blue = color_white_2 >= blue_white and color_blue_2 <= blue_blue
 
-while abs(diffy_2) - tDistance >= 0.5 and abs(diffx_2) - tDistance <= 0.5:   ## stage3 function for moving along y-axis
+while abs(diffy_2) - tDistance >= 0.5:   ## stage3 function for moving along y-axis
 
     if (color_1_sees_white and color_2_sees_white):  ## going straight
         GPIO.output(in1,GPIO.HIGH)
