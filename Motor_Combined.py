@@ -34,7 +34,7 @@ in8 = 19
 #temp1=1
 
 tDistance = 3  ## tolerance distance
-sleepT= 30   ## turning from x to y time used
+sleepT= 34   ## turning from x to y time used
 
 white_white = 7500   ## white frequency while detecting white
 white_blue = 2500   ## blue freqneucy value while detecting white
